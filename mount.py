@@ -34,10 +34,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--path", default=".", type=str, help="Input path for mount")
+    parser.add_argument("--filename", default="", type=str, help="Filename of html file")
 
     args = parser.parse_args()
 
-    tree = get_tree("mount_fs.html")
+    tree = get_tree(args.filename)
     root = tree.root
 
     path = args.path
