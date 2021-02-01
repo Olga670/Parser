@@ -107,7 +107,7 @@ def build_tree(tree: Tree, parent_tag, all_tags: dict) -> None:
 
 
 def get_tree(mount_fs_filename: str) -> Tree:
-    fs_struct = read_html_as_fs_struct("mount_fs.html")
+    fs_struct = read_html_as_fs_struct(mount_fs_filename)
     soup = BeautifulSoup(fs_struct, "html.parser") 
 
     tree = Tree()
